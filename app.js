@@ -12,6 +12,9 @@ router.route('/shelves/to-read')
         }, {
             title: 'Horse land',
             author: 'Horse'
+        }, {
+            title: 'Book 3',
+            author: 'Writer'
         }]
         
         res.json(books);
