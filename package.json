@@ -1,0 +1,22 @@
+{
+  "name": "ns-bookshelves",
+  "version": "1.0.0",
+  "description": "A mobile first website based on the GoodReads API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksoper/BookShelves.git"
+  },
+  "author": "niksoper@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niksoper/BookShelves/issues"
+  },
+  "homepage": "https://github.com/niksoper/BookShelves#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
