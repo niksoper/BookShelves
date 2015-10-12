@@ -1,0 +1,27 @@
+{
+  "name": "bookshelves-client",
+  "description": "A mobile first website based on the GoodReads API.",
+  "dependencies": {
+    "foundation": "~5.5.3"
+  },
+  "devDependencies": {},
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "niksoper"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niksoper/bookshelves-client.git"
+  }
+}
