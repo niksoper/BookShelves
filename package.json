@@ -4,7 +4,6 @@
   "description": "A mobile first website based on the GoodReads API.",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
     "postinstall": "bower install"
   },
   "dependencies": {
