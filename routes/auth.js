@@ -23,6 +23,16 @@ router.route('/google')
                 'https://www.googleapis.com/auth/userinfo.email']
 }));
 
+router.route('/facebook/callback')
+    .get(passport.authenticate('facebook', {
+        successRedirect: '/users/',
+        failure: '/error/'
+}));
+
+router.route('/facebook')
+    .get(passport.authenticate('facebook', {
+        scope: ['email']
+}));
 
 
 module.exports = router;
