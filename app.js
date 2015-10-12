@@ -9,12 +9,24 @@ var session = require('express-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var auth = require('./routes/auth');
 
 var app = express();
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+
+passport.use(new GoogleStrategy({
+        clientID: '964761267742-eh17injtd5ke98tig0pi94g0uhr3fs1s.apps.googleusercontent.com',
+        clientSecret: 'jL8iuZ9N6-yfIB1DW86-ebIM',
+        callbackURL: 'http://localhost:3000/auth/google/callback'
+    },
+    function(req, accessToken, refreshToken, profile, done) {
+        done(null, profile);
+    }
+));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -43,6 +55,7 @@ passport.deserializeUser(function(user, done) {
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/auth', auth)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
