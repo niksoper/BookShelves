@@ -1,12 +1,13 @@
 var passport = require('passport');
-var settings = require('../settings')();
 var GoodreadsStrategy = require('passport-goodreads').Strategy;
+
+var callbackURL = process.env.AUTH_CALLBACK || 'http://localhost:3000/auth/goodreads/callback';
 
 module.exports = function() {
     passport.use(new GoodreadsStrategy({
             consumerKey: 'WvWkXt3OWkMbEpxNGnAGEA',
             consumerSecret: 'ml9PqlyrJ8nm0KhcYt9Mmcl1A34aQY3o6CBoHbW7Y',
-            callbackURL: settings.appUri + 'auth/goodreads/callback'
+            callbackURL: callbackURL
         },
         function(token, tokenSecret, profile, done) {
         

@@ -7,13 +7,12 @@
 var app = require('../app');
 var debug = require('debug')('bookshelves-server:server');
 var http = require('http');
-var settings = require('../config/settings')();
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(settings.port);
+var port = normalizePort(process.env.PORT || 3000);
 app.set('port', port);
 
 /**
