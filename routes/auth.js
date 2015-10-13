@@ -9,7 +9,7 @@ router.route('/goodreads/callback')
             failureRedirect: '/error/'
         }),
         function(req, res) {
-            res.redirect('/users');
+            res.redirect('/home');
         });
 
 router.route('/goodreads')
