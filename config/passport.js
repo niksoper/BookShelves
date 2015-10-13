@@ -12,8 +12,5 @@ module.exports = function(app) {
         done(null, user);
     });
     
-    require('./strategies/google.strategy')();
-    require('./strategies/twitter.strategy')();
-    require('./strategies/facebook.strategy')();
     require('./strategies/goodreads.strategy')();
 }
