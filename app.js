@@ -36,9 +36,10 @@ app.use(session({
 
 require('./config/passport')(app);
 
+app.use('/auth', auth);
 app.use('/sign-in', signIn);
+app.use('/', home);
 app.use('/home', home);
-app.use('/auth', auth)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
